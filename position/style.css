@@ -1,0 +1,35 @@
+.outer{
+    margin:10px;
+    width:90vw;
+    height:300px;
+    border:10px solid orange;
+    background-color: rgb(190, 189, 189);
+    text-align: center;
+    position: relative;
+}
+
+.outer .child{
+    margin:10px auto;
+    width:80%;
+    height:30px;
+    border:5px solid black;
+    background-color: rgba(128, 128, 128, 0.317);
+}
+
+.child-1{
+    /* position: absolute; */
+    border-color: green !important;
+    /* top:0;
+    margin:0 !important; */
+}
+
+.child-2{
+    position:relative;
+    top:12px;
+    border-color: yellow !important;
+    z-index: -100;
+}
+
+.child-3{
+    z-index: 100;
+}
