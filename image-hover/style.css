@@ -1,0 +1,46 @@
+/* way 1 */
+
+/* div{
+    width:200px;
+    height: 200px;
+    margin:100px;
+    position: relative;
+    background: red;
+}
+
+img{
+    position: relative;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+img:hover{
+    opacity: 0.8;
+} */
+
+
+/* Way 2 */
+
+div{
+    width:200px;
+    height: 200px;
+    margin:100px;
+    position: relative;
+}
+
+div::after{
+    content:'';
+    display: block;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    background-color: red;
+    top:0;
+    left:0;
+    opacity: 0;
+    transition:opacity 1s ease;
+}
+
+div:hover::after{
+    opacity: 0.3;
+}
