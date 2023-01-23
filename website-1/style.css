@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+:root{
+    --primary-color:rgb(3, 243, 51);
+    --primary-text-color:rgb(34, 91, 45);
+}
+
+*{
+    border:0px solid red;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img{
+    width:100%;
+    height: auto;
+}
+
+header{
+    height:40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+}
+header::after{
+    content:'';
+    background-image: url(img/music-bg.webp);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.858);
+    z-index: -1;
+    filter: brightness(0.3);
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo{
+    width:70px;
+    border-radius: 50%;
+}
+
+header ul{
+    color:white;
+    list-style: none;
+    padding: 0;
+}
+
+header ul li{
+    display: inline-block;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+header .tagline{
+    width:70%;
+    font-size: 32px;
+    text-align: center;
+    color:aqua;
+    font-family: Sevillana;
+    font-style: italic;
+}
+
+header a{
+    border:1px solid var(--primary-color);
+    padding: 3px 20px;
+    text-decoration: none;
+    color:var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+header a:hover{
+    color: var(--primary-text-color);
+    border-color: var(--primary-text-color);
+    background-color: var(--primary-color);
+}
