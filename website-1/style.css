@@ -2,16 +2,21 @@
 
 :root{
     --primary-color:rgb(3, 243, 51);
-    --primary-text-color:rgb(34, 91, 45);
+    --primary-text-color:rgb(3, 243, 51);
+    --primary-bg-color: rgb(17, 27, 0);
+
+    --secondary-color:rgb(2, 161, 34);
+    --secondary-text-color:rgb(34, 91, 45);
 }
 
 *{
     border:0px solid red;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-    box-sizing: border-box;
-    margin: 0;
 }
 
 img{
@@ -82,16 +87,62 @@ header a{
     border:1px solid var(--primary-color);
     padding: 3px 20px;
     text-decoration: none;
-    color:var(--primary-color);
+    color:var(--primary-text-color);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin: 20px 0;
 }
 
 header a:hover{
-    color: var(--primary-text-color);
-    border-color: var(--primary-text-color);
+    color: var(--secondary-text-color);
+    border-color: var(--secondary-color);
     background-color: var(--primary-color);
+}
+
+.who-we-are{
+    position: relative;
+    display: flex;
+}
+
+.who-we-are .details{
+    display: block;
+    height:200px;
+    width:250px;
+    background-color: var(--primary-bg-color);
+    outline:1px solid var(--secondary-color);
+    color:white;
+    outline-offset: -20px;
+    padding:25px;
+    font-family: Arial, Helvetica, sans-serif;
+    position:relative;
+    top:-30px;
+    left:50px;
+    box-shadow: 4px 4px rgb(169, 168, 168);
+}
+
+.who-we-are .details h2{
+    position: absolute;
+    top:10px;
+    left:50%;
+    transform: translate(-50%);
+    background-color:  var(--primary-bg-color);
+    width: fit-content;
+    padding:0 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.who-we-are .details p{
+    margin:20px 5px;
+    font-size: 14px;
+}
+
+.who-we-are img{
+    width:500px;
+    height: 300px;
+    margin-top: 50px;
+    box-shadow: 3px 3px rgb(169, 168, 168);
+    object-fit: cover;
 }
 
 @media (min-width: 800px) {
@@ -101,5 +152,29 @@ header a:hover{
         flex-direction: row;
         justify-content: space-between;
         margin: 10px 0 50px 0;
+    }
+}
+
+@media (max-width: 360px) {
+
+    header .tagline{
+        width:90%;
+        font-size: 24px;
+    }
+
+    header a{
+        font-size: 10px;
+    }
+
+    .who-we-are img{
+        display: none;
+    }
+
+    .who-we-are .details{
+        font-size: 12px;
+        top:0;
+        left:0;
+        width:100vw;
+        box-shadow: none;
     }
 }
